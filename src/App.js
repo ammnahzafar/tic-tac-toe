@@ -27,6 +27,10 @@ class App extends Component {
 
     let newBoard = [...this.state.board]
 
+    if(newBoard[row][col] === 'x' || newBoard[row][col] === 'o'){
+      return
+    }
+
     let piece = "x";
 
     if(this.state.currentPlayer === 2){
